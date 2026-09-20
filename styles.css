@@ -43,3 +43,29 @@ header{border-bottom-color:rgba(101,203,255,.12);box-shadow:0 10px 35px rgba(0,0
   .sizeGuide b{font-size:10px;color:#edf4f8}
 }
 @media(max-width:360px){.priceLine>span{font-size:17px;padding:10px 7px}.priceLine>span::before{font-size:6px;letter-spacing:.8px}.sizeGuide{grid-template-columns:1fr}}
+
+
+/* 2026-09 hero vehicle refresh — realistic, emblem-free, layout preserved */
+.heroVisual{isolation:isolate}
+.realisticCar{position:absolute;left:-2%;right:-5%;top:25%;height:270px;filter:drop-shadow(0 38px 28px rgba(0,0,0,.92));transform:perspective(900px) rotateY(-4deg);transform-origin:center}
+.realisticCar .carGlow{position:absolute;inset:8% -4% 4% 4%;background:radial-gradient(ellipse at 55% 56%,rgba(64,190,255,.24),rgba(15,91,135,.09) 36%,transparent 70%);filter:blur(26px);z-index:-2}
+.realisticCar .carShell{position:absolute;left:1%;right:1%;bottom:35px;height:170px;background:linear-gradient(165deg,#77838d 0%,#283039 5%,#090c10 25%,#1a2026 49%,#050608 73%,#151b21 91%,#020304 100%);clip-path:polygon(2% 60%,7% 48%,25% 39%,36% 10%,59% 4%,76% 21%,86% 39%,96% 46%,100% 60%,98% 80%,91% 87%,13% 88%,4% 79%);border-radius:36% 26% 18% 18%/52% 45% 22% 22%;box-shadow:inset 0 2px 0 rgba(214,231,243,.52),inset 0 -10px 20px #020304}
+.realisticCar .carShell:after{content:"";position:absolute;left:7%;right:5%;bottom:16px;height:14px;border-radius:50%;background:linear-gradient(90deg,transparent,#050607 12%,#1e272f 50%,#050607 88%,transparent);box-shadow:0 7px 15px #000}
+.realisticCar .carCabin{position:absolute;left:29%;top:13px;width:51%;height:70px;clip-path:polygon(12% 8%,59% 0,93% 23%,100% 78%,0 78%);background:linear-gradient(150deg,#5f6c76 0%,#131a20 8%,#05080b 65%,#1a252d 100%);border-top:1px solid #9aa7b1;overflow:hidden}
+.realisticCar .glass{position:absolute;top:8px;height:51px;background:linear-gradient(145deg,rgba(104,141,163,.34),rgba(3,8,12,.94) 48%,rgba(23,50,66,.7));box-shadow:inset 0 0 18px #020406}
+.realisticCar .frontGlass{left:7%;width:45%;clip-path:polygon(20% 0,100% 0,88% 100%,0 100%)}
+.realisticCar .rearGlass{left:55%;width:37%;clip-path:polygon(0 0,64% 10%,100% 100%,10% 100%)}
+.realisticCar .pillar{position:absolute;left:52%;top:4px;width:5px;height:61px;background:#151b20;transform:skewX(-8deg);z-index:2}
+.realisticCar .hoodLine{position:absolute;left:6%;top:76px;width:31%;height:2px;background:linear-gradient(90deg,transparent,#778692 45%,transparent);transform:rotate(-4deg);opacity:.75}
+.realisticCar .sideLine{position:absolute;left:39%;right:7%;top:94px;height:1px;background:linear-gradient(90deg,rgba(161,180,193,.65),rgba(52,70,83,.22),transparent)}
+.realisticCar .grille{position:absolute;left:4%;top:98px;width:24%;height:40px;border:1px solid #303942;border-radius:7px 4px 12px 16px;background:repeating-linear-gradient(0deg,#050708 0 4px,#11171c 4px 6px);box-shadow:inset 0 0 18px #000}
+.realisticCar .headlight{position:absolute;top:83px;height:16px;background:linear-gradient(90deg,#e9f9ff,#75d8ff 45%,#168bd0 72%,transparent);filter:drop-shadow(0 0 7px rgba(77,196,255,.95));border-radius:70% 18% 60% 20%;z-index:3}
+.realisticCar .hl1{left:5%;width:17%;transform:rotate(-6deg)}.realisticCar .hl2{right:5%;width:10%;opacity:.75;transform:rotate(5deg)}
+.realisticCar .mirror{position:absolute;right:22%;top:65px;width:34px;height:15px;border-radius:70% 30% 50% 40%;background:linear-gradient(#5a6670,#090c10 65%);box-shadow:0 3px 5px #000}
+.realisticCar .door{position:absolute;top:78px;height:67px;border-left:1px solid rgba(121,137,149,.24);border-right:1px solid rgba(0,0,0,.75);border-radius:4px}.realisticCar .d1{left:47%;width:20%}.realisticCar .d2{left:67%;width:17%}
+.realisticCar .wheel{position:absolute;z-index:8;width:88px;height:88px;bottom:-15px;border-radius:50%;background:radial-gradient(circle,#111 0 9%,#6f7b85 10% 12%,#151b20 13% 21%,#707b84 22% 24%,#0c1014 25% 47%,#010203 48% 62%,#161a1e 63% 68%,#020304 69%);border:3px solid #1f252a;box-shadow:0 9px 15px #000,inset 0 0 0 2px #080a0c}
+.realisticCar .wheel i{position:absolute;inset:23%;border-radius:50%;background:conic-gradient(from 0deg,#8a969f 0 5%,#171d22 5% 20%,#8a969f 20% 25%,#171d22 25% 40%,#8a969f 40% 45%,#171d22 45% 60%,#8a969f 60% 65%,#171d22 65% 80%,#8a969f 80% 85%,#171d22 85% 100%)}
+.realisticCar .rw1{left:18%}.realisticCar .rw2{right:12%}
+.realisticCar .roadReflection{position:absolute;left:4%;right:0;bottom:0;height:36px;background:radial-gradient(ellipse at center,rgba(70,183,242,.15),rgba(8,12,16,.4) 42%,transparent 72%);filter:blur(5px);transform:scaleY(.65)}
+@media(max-width:900px){.realisticCar{top:20%;left:3%;right:0;transform:scale(.9) perspective(900px) rotateY(-4deg)}}
+@media(max-width:560px){.realisticCar{left:-8%;right:-20%;top:18%;transform:scale(.84) perspective(900px) rotateY(-4deg)}}
