@@ -69,3 +69,13 @@ header{border-bottom-color:rgba(101,203,255,.12);box-shadow:0 10px 35px rgba(0,0
 .realisticCar .roadReflection{position:absolute;left:4%;right:0;bottom:0;height:36px;background:radial-gradient(ellipse at center,rgba(70,183,242,.15),rgba(8,12,16,.4) 42%,transparent 72%);filter:blur(5px);transform:scaleY(.65)}
 @media(max-width:900px){.realisticCar{top:20%;left:3%;right:0;transform:scale(.9) perspective(900px) rotateY(-4deg)}}
 @media(max-width:560px){.realisticCar{left:-8%;right:-20%;top:18%;transform:scale(.84) perspective(900px) rotateY(-4deg)}}
+
+
+/* Real hero artwork — uploaded asset, replacing the CSS-built vehicle */
+.heroVisual{height:520px;position:relative;overflow:visible;border-radius:18px}
+.heroPhoto{position:absolute;inset:2% -9% 0 -5%;background-image:linear-gradient(90deg,var(--bg) 0%,rgba(7,9,12,.78) 9%,rgba(7,9,12,.12) 30%,rgba(7,9,12,0) 56%),linear-gradient(0deg,var(--bg) 0%,rgba(7,9,12,0) 24%),url("mighty-fine-hero-car.png");background-size:cover;background-position:61% center;background-repeat:no-repeat;border-radius:22px;filter:saturate(.93) contrast(1.03);box-shadow:0 30px 70px rgba(0,0,0,.32);z-index:-1}
+.heroPhoto:after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 40px 0 70px rgba(7,9,12,.42),inset 0 -28px 45px rgba(7,9,12,.48);pointer-events:none}
+.heroVisual>.shine{z-index:0;opacity:.55}
+.heroVisual>.floatCard{z-index:2}
+@media(max-width:900px){.heroVisual{height:390px;margin-top:12px}.heroPhoto{inset:0 -12% 0 -12%;background-position:68% center;background-image:linear-gradient(90deg,var(--bg) 0%,rgba(7,9,12,.28) 20%,transparent 52%),linear-gradient(0deg,var(--bg) 0%,transparent 28%),url("mighty-fine-hero-car.png")}}
+@media(max-width:560px){.heroVisual{height:315px;margin-top:8px}.heroPhoto{inset:0 -28% 0 -22%;background-position:72% center;border-radius:14px}.heroVisual>.floatCard{right:0;bottom:8%;padding:13px 15px}}
