@@ -79,3 +79,15 @@ header{border-bottom-color:rgba(101,203,255,.12);box-shadow:0 10px 35px rgba(0,0
 .heroVisual>.floatCard{z-index:2}
 @media(max-width:900px){.heroVisual{height:390px;margin-top:12px}.heroPhoto{inset:0 -12% 0 -12%;background-position:68% center;background-image:linear-gradient(90deg,var(--bg) 0%,rgba(7,9,12,.28) 20%,transparent 52%),linear-gradient(0deg,var(--bg) 0%,transparent 28%),url("mighty-fine-hero-car.png")}}
 @media(max-width:560px){.heroVisual{height:315px;margin-top:8px}.heroPhoto{inset:0 -28% 0 -22%;background-position:72% center;border-radius:14px}.heroVisual>.floatCard{right:0;bottom:8%;padding:13px 15px}}
+
+
+/* Full-bleed hero artwork: nav border to moving-services strip */
+.hero{position:relative;isolation:isolate;overflow:hidden}
+.hero .wrap{position:relative;z-index:2}
+.heroVisual{position:static;height:auto;margin:0;overflow:visible}
+.heroPhotoBackdrop{position:absolute;z-index:-2;inset:0;background-image:linear-gradient(90deg,rgba(7,9,12,.97) 0%,rgba(7,9,12,.89) 23%,rgba(7,9,12,.52) 43%,rgba(7,9,12,.08) 67%,rgba(7,9,12,.08) 100%),linear-gradient(0deg,rgba(7,9,12,.72) 0%,rgba(7,9,12,.08) 26%,rgba(7,9,12,.10) 78%,rgba(7,9,12,.58) 100%),url("mighty-fine-hero-car.png");background-size:cover;background-position:center 54%;background-repeat:no-repeat;border-radius:0;filter:saturate(.94) contrast(1.04);box-shadow:none}
+.heroPhotoBackdrop:after{content:"";position:absolute;inset:0;border-radius:0;background:radial-gradient(circle at 76% 47%,rgba(38,164,232,.09),transparent 32%);box-shadow:inset 0 -40px 60px rgba(7,9,12,.5);pointer-events:none}
+.heroVisual>.shine{z-index:-1}
+.heroVisual>.floatCard{z-index:3;position:absolute;right:4%;bottom:15%}
+@media(max-width:900px){.heroVisual{height:auto;margin:0}.heroPhotoBackdrop{inset:0;background-position:64% center;background-image:linear-gradient(90deg,rgba(7,9,12,.95) 0%,rgba(7,9,12,.72) 42%,rgba(7,9,12,.2) 75%),linear-gradient(0deg,rgba(7,9,12,.66),transparent 36%),url("mighty-fine-hero-car.png")}.heroVisual>.floatCard{right:5%;bottom:10%}}
+@media(max-width:560px){.heroPhotoBackdrop{inset:0;background-position:69% center;border-radius:0;opacity:.8}.heroVisual>.floatCard{right:5%;bottom:7%}}
