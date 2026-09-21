@@ -1,0 +1,27 @@
+name: Website Validation
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: node --check script.js
+      - name: Check production invariants
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q 'script.js?v=3' index.html
+          grep -q 'Content-Security-Policy:' _headers
+          grep -q 'https://cdn.jsdelivr.net' _headers
+          grep -q 'https://fonts.googleapis.com' _headers
+          grep -q 'https://rciscmvvfancpwsmpbtn.supabase.co' _headers
+          ! grep -Eqi 'service[_-]?role' index.html script.js _headers
