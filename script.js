@@ -29,6 +29,14 @@ form.onsubmit=async e=>{
 };
 document.querySelector(".restart").onclick=()=>{vehicle="";service="";started=false;form.reset();step(1)};
 
+const tickerGroups=[...document.querySelectorAll(".ticker-group")],tickerTemplate=[...tickerGroups[0].children].map(item=>item.cloneNode(true));
+function fillTicker(){
+ const target=Math.max(innerWidth*1.15,1200);
+ while(tickerGroups[0].scrollWidth<target){tickerTemplate.forEach(template=>{const copy=template.cloneNode(true);copy.setAttribute("aria-hidden","true");tickerGroups[0].append(copy)})}
+ tickerGroups[1].replaceChildren(...[...tickerGroups[0].children].map(item=>item.cloneNode(true)));
+}
+fillTicker();let tickerResize;addEventListener("resize",()=>{clearTimeout(tickerResize);tickerResize=setTimeout(fillTicker,150)});
+
 document.querySelector(".hamb").onclick=()=>{const nav=document.querySelector("nav");nav.style.display=nav.style.display==="flex"?"none":"flex";Object.assign(nav.style,{position:"absolute",top:"84px",left:"0",right:"0",padding:"25px",background:"#0b0e12",flexDirection:"column"})};
 
 // Reviews section + slightly softer service ticker. Review copy intentionally stays

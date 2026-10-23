@@ -11,6 +11,9 @@ test("service ticker uses two matching groups for a continuous loop", () => {
   assert.equal((html.match(/class="ticker-group"/g) || []).length, 2);
   assert.match(css, /\.ticker-track\{[^}]*display:flex/);
   assert.match(css, /@keyframes tickerLoop\{[^}]*to\{transform:translateX\(-50%\)\}/);
+  assert.match(css, /mask-image:linear-gradient/);
+  assert.doesNotMatch(css, /\.ticker-group\{[^}]*justify-content:space-around/);
+  assert.match(script, /function fillTicker\(\)/);
 });
 
 test("placeholder before-and-after gallery is removed", () => {
